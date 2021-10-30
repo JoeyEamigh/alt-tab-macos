@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BB26FDC26DE8E9A003F4085 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BB26FDB26DE8E9A003F4085 /* LoginServiceKit */; };
 		4807A6C623A9CD190052A53E /* SkyLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4807A6C523A9CD190052A53E /* SkyLight.framework */; };
 		48F3E16224EC0D8800A1C64B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04BABDA79F8EF76E3ACDD5F /* Localizable.strings */; };
 		76D02BB22BFE7C9E0056008D /* Pods_alt_tab_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0712B3BEA2B3780398C0999 /* Pods_alt_tab_macos.framework */; };
@@ -144,6 +143,7 @@
 		D04BAFB973C3D28718FAEB87 /* Windows.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04BACD976030676FD0761D5 /* Windows.swift */; };
 		D04BAFBC862BA5FE0294EA7A /* AXUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04BA6F823BC0EDA9AA4B80A /* AXUIElement.swift */; };
 		D04BAFF30A98CF287F85DA1E /* BlacklistsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04BA27695D9A5824720BD7B /* BlacklistsTab.swift */; };
+		D4C79241272CF96800CC5B5A /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4C79240272CF96800CC5B5A /* LoginServiceKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,6 +384,8 @@
 		D04BAF77F9D94C397EB646AE /* 1-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1-row.jpg"; sourceTree = "<group>"; };
 		D04BAFA20F13FB588F6CCB81 /* bug_report.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = bug_report.md; sourceTree = "<group>"; };
 		D04BAFDA9E2623E21CBD6CEF /* zh-TW */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = InfoPlist.strings; sourceTree = "<group>"; };
+		D4C7923E272CF80B00CC5B5A /* LoginServiceKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LoginServiceKit; path = ../LoginServiceKit; sourceTree = "<group>"; };
+		D4C7923F272CF93C00CC5B5A /* LoginServiceKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = LoginServiceKit.podspec; path = ../LoginServiceKit/LoginServiceKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,7 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4807A6C623A9CD190052A53E /* SkyLight.framework in Frameworks */,
-				0BB26FDC26DE8E9A003F4085 /* LoginServiceKit in Frameworks */,
+				D4C79241272CF96800CC5B5A /* LoginServiceKit in Frameworks */,
 				76D02BB22BFE7C9E0056008D /* Pods_alt_tab_macos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +405,7 @@
 		4807A6C423A9CD190052A53E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4C7923F272CF93C00CC5B5A /* LoginServiceKit.podspec */,
 				4807A6C523A9CD190052A53E /* SkyLight.framework */,
 				C0712B3BEA2B3780398C0999 /* Pods_alt_tab_macos.framework */,
 			);
@@ -637,6 +640,7 @@
 				D04BA84F172AE89F210CA01D /* Pipfile.lock */,
 				A638921971E99EC1D9EC383D /* Pods */,
 				481FE54624D2D387001032F1 /* alt-tab-macos-Bridging-Header.h */,
+				D4C7923E272CF80B00CC5B5A /* LoginServiceKit */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1175,7 +1179,7 @@
 			);
 			name = "alt-tab-macos";
 			packageProductDependencies = (
-				0BB26FDB26DE8E9A003F4085 /* LoginServiceKit */,
+				D4C79240272CF96800CC5B5A /* LoginServiceKit */,
 			);
 			productName = "alt-tab-macos";
 			productReference = D04BA82F792DF53958D92572 /* AltTab.app */;
@@ -1187,7 +1191,7 @@
 		D04BA59EB5ED6F005E8F4407 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = lwouis;
 			};
 			buildConfigurationList = D04BA83C9495F252D87CDF0F /* Build configuration list for PBXProject "alt-tab-macos" */;
@@ -1224,6 +1228,7 @@
 				lb,
 				hi,
 				bg,
+				Base,
 			);
 			mainGroup = D04BA1463D2A17038222BB84;
 			packageReferences = (
@@ -1931,6 +1936,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D04BA62D5EACAAAD7BCD3E79 /* release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				MARKETING_VERSION = 7.0.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.alt-tab-macos";
 			};
 			name = Release;
 		};
@@ -1938,12 +1949,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D04BA1232AFEEFE90D5CC827 /* debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				MARKETING_VERSION = 7.0.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.alt-tab-macos";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		D04BA801581D700C583B53FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1966,6 +1986,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2002,6 +2023,7 @@
 		D04BA9150F87B08AB0ACE4AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2024,6 +2046,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2085,7 +2108,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0BB26FDB26DE8E9A003F4085 /* LoginServiceKit */ = {
+		D4C79240272CF96800CC5B5A /* LoginServiceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0BB26FDA26DE8E9A003F4085 /* XCRemoteSwiftPackageReference "LoginServiceKit" */;
 			productName = LoginServiceKit;
